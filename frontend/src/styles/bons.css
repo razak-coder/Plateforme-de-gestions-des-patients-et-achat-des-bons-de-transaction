@@ -1,0 +1,308 @@
+/* ===== CARDS BONS ===== */
+.bons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .bon-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eeeeee;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .bon-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    border-color: #1F5C9E;
+  }
+  
+  .bon-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+  }
+  
+  .bon-card-icon {
+    width: 46px;
+    height: 46px;
+    background: #eaf2fb;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .bon-card-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #222222;
+    margin-bottom: 6px;
+  }
+  
+  .bon-card-montant {
+    font-size: 26px;
+    font-weight: bold;
+    color: #1F5C9E;
+    margin-bottom: 4px;
+  }
+  
+  .bon-card-montant span {
+    font-size: 14px;
+    font-weight: normal;
+    color: #888888;
+  }
+  
+  .bon-card-validite {
+    font-size: 12px;
+    color: #888888;
+    margin-bottom: 16px;
+  }
+  
+  /* ===== ÉTAPES ACHAT ===== */
+  .etapes-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+  
+  .etape-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: normal;
+    transition: all 0.3s;
+  }
+  
+  .etape-item.active {
+    background: #1F5C9E;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .etape-item.done {
+    background: #1A7A4A;
+    color: #ffffff;
+  }
+  
+  .etape-item.inactive {
+    background: #eeeeee;
+    color: #aaaaaa;
+  }
+  
+  .etape-separateur {
+    flex: 1;
+    height: 2px;
+    background: #eeeeee;
+    max-width: 40px;
+  }
+  
+  /* ===== PAIEMENT MOBILE MONEY ===== */
+  .paiement-recap {
+    background: #eaf2fb;
+    border: 1px solid #b5d4f4;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+  }
+  
+  .paiement-recap-titre {
+    font-weight: bold;
+    color: #1F5C9E;
+    margin-bottom: 4px;
+    font-size: 14px;
+  }
+  
+  .paiement-recap-montant {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1F5C9E;
+  }
+  
+  .paiement-recap-validite {
+    font-size: 12px;
+    color: #555555;
+    margin-top: 4px;
+  }
+  
+  /* ===== CONFIRMATION BON ===== */
+  .confirmation-container {
+    max-width: 480px;
+  }
+  
+  .confirmation-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+  
+  .confirmation-icon {
+    width: 72px;
+    height: 72px;
+    background: #eafaf1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+  }
+  
+  .confirmation-titre {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1A7A4A;
+    margin-bottom: 8px;
+  }
+  
+  .confirmation-sous-titre {
+    font-size: 13px;
+    color: #888888;
+    margin-bottom: 24px;
+  }
+  
+  .confirmation-details {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .confirmation-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  
+  .confirmation-detail-item label {
+    font-size: 11px;
+    color: #888888;
+    display: block;
+    margin-bottom: 2px;
+  }
+  
+  .confirmation-detail-item p {
+    font-size: 13px;
+    font-weight: bold;
+    color: #1F5C9E;
+  }
+  
+  /* ===== HISTORIQUE ===== */
+  .historique-filtres {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .historique-search {
+    position: relative;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .historique-search input {
+    width: 100%;
+    padding: 9px 9px 9px 34px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  
+  .historique-search input:focus {
+    border-color: #1F5C9E;
+  }
+  
+  .historique-search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888888;
+  }
+  
+  .historique-select {
+    padding: 9px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 13px;
+    outline: none;
+    background: #ffffff;
+    cursor: pointer;
+  }
+  
+  .historique-select:focus {
+    border-color: #1F5C9E;
+  }
+  
+  /* ===== CODE UNIQUE BON ===== */
+  .code-unique {
+    background: #f4f4f4;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-family: monospace;
+    color: #333333;
+    letter-spacing: 0.5px;
+  }
+  
+  /* ===== DETAIL BON (MODAL) ===== */
+  .bon-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .bon-detail-item {
+    background: #f8f9fa;
+    border-radius: 6px;
+    padding: 10px 12px;
+  }
+  
+  .bon-detail-item label {
+    font-size: 11px;
+    color: #888888;
+    display: block;
+    margin-bottom: 3px;
+  }
+  
+  .bon-detail-item p {
+    font-size: 13px;
+    font-weight: bold;
+    color: #333333;
+  }
+  
+  /* ===== ÉTAT VIDE ===== */
+  .bons-empty {
+    text-align: center;
+    padding: 48px 20px;
+    color: #aaaaaa;
+  }
+  
+  .bons-empty p {
+    margin-top: 12px;
+    font-size: 14px;
+  }
+  
+  /* ===== COMPTEUR RÉSULTATS ===== */
+  .resultats-count {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #888888;
+  }
